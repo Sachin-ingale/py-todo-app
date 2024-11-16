@@ -39,12 +39,11 @@ def openTaskFile():
         
 
         for task in tasks:
-            task = task.strip()  # Strip any leading/trailing spaces or newline characters
-            if task:  # If the task is not empty
+            task = task.strip()
+            if task:
                 task_list.append(task)
-                listbox.insert(END, task)  # Insert task into the Listbox
+                listbox.insert(END, task) 
     except FileNotFoundError:
-        # If the file doesn't exist, create it
         with open("tasklist.txt", "w") as file:
             pass
 
@@ -52,36 +51,35 @@ def openTaskFile():
 image_icon = PhotoImage(file="task.png")
 root.iconphoto(False, image_icon)
 
-# top bar (resizing image to fit the smaller window)
+# top bar
 TopImage = PhotoImage(file="topbar.png")
 Label(root, image=TopImage).pack()
 
 dockImage = PhotoImage(file="dock.png")
-Label(root, image=dockImage, bg="#32405b").place(x=20, y=15)  # Adjusted position
+Label(root, image=dockImage, bg="#32405b").place(x=20, y=15) 
 
 noteImage = PhotoImage(file="task.png")
-Label(root, image=noteImage, bg="#32405b").place(x=250, y=15)  # Adjusted position
+Label(root, image=noteImage, bg="#32405b").place(x=250, y=15)
 
-heading = Label(root, text="ALL TASK", font="arial 16 bold", fg="white", bg="#32405b")  # Smaller font size
-heading.place(x=100, y=10)  # Adjusted position
+heading = Label(root, text="ALL TASK", font="arial 16 bold", fg="white", bg="#32405b")
+heading.place(x=100, y=10)
 
 # main
-frame = Frame(root, width=300, height=40, bg="white")  # Smaller frame
+frame = Frame(root, width=300, height=40, bg="white")
 frame.place(x=0, y=130)
 
 task = StringVar()
-task_entry = Entry(frame, width=14, font="arial 16", bd=0)  # Smaller font and entry width
-task_entry.place(x=10, y=5)  # Adjusted position
+task_entry = Entry(frame, width=14, font="arial 16", bd=0)
+task_entry.place(x=10, y=5)
 task_entry.focus()
 
-button = Button(frame, text="ADD", font="arial 16 bold", width=5, bg="#5a95ff", fg="#fff", bd=0,command=addTask)  # Smaller button
-button.place(x=220, y=0)  # Adjusted position
+button = Button(frame, text="ADD", font="arial 16 bold", width=5, bg="#5a95ff", fg="#fff", bd=0,command=addTask)
+button.place(x=220, y=0)
 
 # listbox
-frame1 = Frame(root, bd=3, width=300, height=200, bg="#32405b")  # Smaller frame
-frame1.pack(pady=(120, 0))  # Adjusted padding
-
-listbox = Listbox(frame1, font=('arial', 10), width=28, height=10, bg="#32405b", fg="white", cursor="hand2", selectbackground="#5a95ff")  # Smaller font and listbox size
+frame1 = Frame(root, bd=3, width=300, height=200, bg="#32405b")
+frame1.pack(pady=(120, 0))
+listbox = Listbox(frame1, font=('arial', 10), width=28, height=10, bg="#32405b", fg="white", cursor="hand2", selectbackground="#5a95ff") 
 listbox.pack(side=LEFT, fill=BOTH, padx=2)
 scrollbar = Scrollbar(frame1)
 scrollbar.pack(side=RIGHT, fill=BOTH)
@@ -94,7 +92,7 @@ openTaskFile()
 
 # delete
 Delete_icon = PhotoImage(file="delete.png")
-Button(root, image=Delete_icon, bd=0,command=deleteTask).pack(side=BOTTOM, pady=10,)  # Adjusted padding
+Button(root, image=Delete_icon, bd=0,command=deleteTask).pack(side=BOTTOM, pady=10,)
 
 name_label = Label(root, text="Developed by Sachin Ingale", bg="#fff", font="arial 10 italic")
 name_label.pack(side=BOTTOM, pady=10)
