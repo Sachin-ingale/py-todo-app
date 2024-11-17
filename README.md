@@ -1,33 +1,46 @@
-# To-Do List App
+# Py-Todo-App
+================
 
-A simple To-Do List application built with Python and Tkinter. This app allows you to add, delete, and manage tasks with a graphical user interface. Tasks are stored in a local text file (`tasklist.txt`) to persist across sessions.
+
+## Overview
+-----------
+
+A simple and intuitive To-Do List application built using Python's Tkinter library.
+
 
 ## Features
 
-- **Add new tasks**: Easily add new tasks to your to-do list.
-- **View tasks**: View all tasks in a scrollable list.
-- **Delete tasks**: Remove tasks from the list when they’re completed or no longer needed.
-- **Persistent tasks**: Tasks are saved in `tasklist.txt` and persist even after closing and reopening the app.
-- **User-friendly GUI**: Simple and intuitive graphical interface built with Tkinter.
+*   Add tasks to the list
+*   Delete tasks from the list
+*   Persistent storage using a text file (tasklist.txt)
+*   Simple and easy-to-use interface
 
-## Technologies Used
 
-- **Python** (3.x)
-- **Tkinter** (for building the GUI)
-- **File I/O** (to store tasks in a text file)
+## Requirements
+
+*   Python 3.x
+*   Tkinter library (included with Python)
+
 
 ## Installation
 
-### Prerequisites
+```bash
+git clone https://github.com/Sachin-ingale/py-todo-app.git
+cd py-todo-app
+python todo_list.py
 
-Ensure you have the following installed:
-- Python 3.x (Python 3.6 or higher recommended)
-- Tkinter (comes pre-installed with Python)
-
-### Steps to Set Up
-
-1. **Clone the repository**:
-
-   ```bash
-   git clone https://github.com/yourusername/todo-app.git
-
+Usage
+Launch the application.
+Enter a task in the input field and click "ADD" to add it to the list.
+Select a task and click the delete button to remove it from the list.
+Tasks are saved automatically to tasklist.txt.
+Troubleshooting
+Ensure tasklist.txt is in the same directory as the application.
+Check for any syntax errors in tasklist.txt.
+Development
+Developed by Sachin Ingale
+Version 1.0
+License
+This application is open-source and free to use, modify, and distribute under the MIT License.
+Contributing
+Contributions are welcome! Feel free to fork and submit pull requests.
