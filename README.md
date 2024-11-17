@@ -1,4 +1,4 @@
-# Py-Todo-App
+# To-Do List Application
 ================
 
 
@@ -6,6 +6,8 @@
 -----------
 
 A simple and intuitive To-Do List application built using Python's Tkinter library.
+<img width="960" alt="todo app" src="https://github.com/user-attachments/assets/a6c206a8-6ed2-4fba-9f06-9aa1f394b596">
+
 
 
 ## Features
